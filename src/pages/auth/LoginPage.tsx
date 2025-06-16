@@ -3,7 +3,7 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import { EyeIcon, EyeSlashIcon } from '@heroicons/react/24/outline';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useAuth } from '@/context/AuthContext';
 import { AuthLayout } from '@/components/auth/AuthLayout';
 import { Button } from '@/components/ui/button';
@@ -20,7 +20,6 @@ const schema = z.object({
 type LoginFormData = z.infer<typeof schema>;
 
 export function LoginPage() {
-  const navigate = useNavigate();
   const { signIn } = useAuth();
   const [isVisible, setIsVisible] = useState(false);
   const [error, setError] = useState('');
@@ -29,7 +28,7 @@ export function LoginPage() {
   const {
     register,
     handleSubmit,
-    formState: { errors, isSubmitting },
+    formState: { errors },
   } = useForm<LoginFormData>({
     resolver: zodResolver(schema),
   });
