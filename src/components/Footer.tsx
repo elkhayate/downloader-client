@@ -9,7 +9,7 @@ export function Footer() {
         </div>
         <div className="flex items-center gap-4">
           <a
-            href="https://github.com/merdashi/downloader-client"
+            href="https://github.com/elkhayate/downloader-client"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-1 text-muted-foreground hover:text-primary transition-colors"

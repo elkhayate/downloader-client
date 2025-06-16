@@ -9,7 +9,7 @@ import { ForgotPasswordPage } from './pages/auth/ForgotPasswordPage';
 import { ResetPasswordPage } from './pages/auth/ResetPasswordPage';
 import { LandingPage } from './pages/LandingPage';
 import { AuthGuard, GuestGuard } from './middleware/auth';
- 
+import { NotFound } from './components/NotFound';
 
 function App() {
   return (
@@ -68,6 +68,8 @@ function App() {
             </AuthGuard>
           }
         />
+        {/* 404 Not Found Route */}
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <Toaster />
     </Router>
