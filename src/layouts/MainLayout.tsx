@@ -7,9 +7,9 @@ interface MainLayoutProps {
 
 export function MainLayout({ children }: MainLayoutProps) {
   return (
-    <div className="relative min-h-screen bg-background">
+    <div className="min-h-screen bg-background">
       <Navbar />
-      <main className="container mx-auto max-w-7xl px-4 py-8">
+      <main className="container mx-auto max-w-7xl px-4 py-6">
         {children}
       </main>
     </div>
